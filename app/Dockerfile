@@ -6,5 +6,6 @@ COPY Pipfile* /tmp/
 RUN cd /tmp && pipenv lock --requirements > requirements.txt
 RUN pip install -r /tmp/requirements.txt
 COPY . /app
-ENV FLASK_APP=app.py
-CMD [ "flask", "run", "--host", "0.0.0.0", "--port", "5000" ]
+ENV FLASK_APP=${FLASK_APP}
+ENV FLASK_ENV=${FLASK_ENV}
+CMD flask run --host ${FLASK_HOST} --port ${FLASK_PORT}

@@ -7,6 +7,8 @@ services:
       - APP_PORT=${APP_PORT}
       - FLASK_PORT=${FLASK_PORT}
       - FLASK_HOST=${FLASK_HOST}
+      - FLASK_ENV=${FLASK_ENV}
+      - FLASK_APP=${FLASK_APP}
     image: example-flask-app
     hostname: example-flask-app
     container_name: example-flask-app
