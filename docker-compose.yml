@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  example-flask-app:
+    build: ./app
+    environment:
+      - APP_PORT=${APP_PORT}
+      - FLASK_PORT=${FLASK_PORT}
+      - FLASK_HOST=${FLASK_HOST}
+    image: example-flask-app
+    hostname: example-flask-app
+    container_name: example-flask-app
+    restart: always
+    ports:
+      - ${APP_PORT}:${FLASK_PORT}
