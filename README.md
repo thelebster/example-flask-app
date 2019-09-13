@@ -12,6 +12,8 @@ Run application:
 docker-compose up --build
 ```
 
+Go to http://127.0.0.1:3000/hello.
+
 Run application with [pipenv](https://github.com/pypa/pipenv):
 
 ```
